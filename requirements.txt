@@ -8,9 +8,11 @@ transformers~=4.42
 matplotlib==3.9.1
 pandas~=2.2
 tiktoken==0.7.0
+azure-identity==1.17.1
 azure-search-documents==11.6.0b4
 azure-ai-generative==1.0.0b8
 azure-cognitiveservices-speech==1.38.0
+azure-ai-documentintelligence==1.0.0b3
 scikit-learn==1.5.1
 datasets~=2.20
 opencv-python-headless==4.10.0.84

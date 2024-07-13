@@ -28,7 +28,7 @@ Please do not forget to modify the `.env` file to match your account. Rename `.e
 
 ### PDF
 - `make_qa_multimodal_pdf_docai.ipynb`: (Recommended) Generate QnA synthetic dataset from a Complex PDF using Azure AI Document Intelligence.
-- `make_qa_multimodal_pdf_oss.ipynb`:  Generate QnA synthetic dataset from a Complex PDF using Open source (Unstructured toolkit for this hands-on).
+- `make_qa_multimodal_pdf_oss.ipynb`:  Generate QnA synthetic dataset from a Complex PDF using Open source (Unstructured toolkit for this hands-on). To run this file, you first need to install the required packages with `startup_unstructured.sh`. The installation will take a few minutes.
 - `make_qa_only_image_multiple_pdf.ipynb`: Generate QnA synthetic dataset from multiple PDFs - Image-heavy PDF.
 - `make_qa_only_image_pdf.ipynb`: Generate QnA synthetic dataset from a PDF - Image-heavy PDF.
 
@@ -38,13 +38,13 @@ Please do not forget to modify the `.env` file to match your account. Rename `.e
 
 ## How to get started 
 
-### Option 1. Azure AI Studio 
+### Option 1. Azure AI Studio or Azure ML Stuio
 Create your compute instance. For code development, we recommend `Standard_DS11_v2` (2 cores, 14GB RAM, 28GB storage, No GPUs).
 
 If you want to use the Unstructured toolkit for processing a complex PDF, please be sure to include `startup_unstructured.sh` in your instance startup script.
 
 ### Option 2. GitHub Codespace
-Please start a new project by connecting to Codespace Project.
+Please start a new project by connecting to Codespace Project. The environment required for hands-on is automatically configured through devcontainer, so you only need to run a Jupyter notebook.
 
 ### Option 3. Your local PC
 Please start by installing the required packages on your local PC with `pip install -r requirements.txt`
