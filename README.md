@@ -6,9 +6,15 @@ For fine-tuning or RAG, it is often necessary to generate data in Q&A format fro
 This handson aims to alleviate some of that headache by demonstrating how to create a QnA dataset from complex unstructured data, assuming a real-world scenario. The sample aims to be step-by-step for developers and data scientists, as well as those in the field, to try it out with a little help.
 
 ## Scenario
+
+### Overview
 We have a variety of information about the latest flagship mobile pohnes, including detailed product specifications, user manuals, advertising brochures, and CS information guides, in various formats such as pdf, csv, and txt. These raw data are used to create synthetic QnAs and use them for fine tuning and RAG to improve user experience. 
 
-Below is a comparison of the results before and after fine tuning of GPT-4o without RAG. GPT-4o is available to a small number of customers as a private preview as of July 2024.
+![concept](./imgs/concept.png)
+
+### Experiments
+
+Below is a comparison of the results before and after fine tuning of GPT-4o without RAG for customer PoC. GPT-4o is available to a small number of customers as a private preview as of July 2024.
 ![fine-tuning-result-sample](./imgs/fine-tuning-result-sample.png)
 
 This is the result of creating a set of 16 questions and answers for PoC and comparing three indicators of **Similarity, Coherence, and Fluency** in Azure AI studio. The values ​​of the indicator are on a scale of 1-5, with higher values ​​being better.
@@ -38,7 +44,7 @@ Please do not forget to modify the `.env` file to match your account. Rename `.e
 
 ## How to get started 
 
-### Option 1. Azure AI Studio or Azure ML Stuio
+### Option 1. Azure AI Studio or Azure ML Studio
 Create your compute instance. For code development, we recommend `Standard_DS11_v2` (2 cores, 14GB RAM, 28GB storage, No GPUs).
 
 If you want to use the Unstructured toolkit for processing a complex PDF, please be sure to include `startup_unstructured.sh` in your instance startup script.
