@@ -1,5 +1,6 @@
 pdf2image==1.17.0
-langchain==0.2.7 
+langchain==0.2.7
+langchain-openai==0.1.16
 langchain-community==0.2.7
 python-dotenv==1.0.1
 openai==1.35.13
@@ -12,4 +13,7 @@ azure-ai-generative==1.0.0b8
 azure-cognitiveservices-speech==1.38.0
 scikit-learn==1.5.1
 datasets~=2.20
+opencv-python-headless==4.10.0.84
+markdownify==0.12.1
+pymupdf==1.24.7
 Jinja2

@@ -39,7 +39,7 @@ def convert_to_oai_format(qa_pair, system_prompt_msg="You're an AI assistant tha
                     sample.append(user_message)
                     sample.append(assistant_message)
             else:  # single turn
-                if isinstance(qa_, dict):                
+                if isinstance(qa, dict):                
                     user_message = {"role": "user", "content": qa["QUESTION"]}
                     assistant_message = {"role": "assistant", "content": qa["ANSWER"]}
                 else:
@@ -56,7 +56,7 @@ def convert_to_oai_format(qa_pair, system_prompt_msg="You're an AI assistant tha
     else:
         print("Argument is not a list")
         return None
-    
+
 
 def save_jsonl(dictionary_data, file_path):
     with open(file_path, 'w', encoding='UTF-8-sig') as f:
