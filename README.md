@@ -1,13 +1,21 @@
 # Generate Synthetic QnAs from real-world data
 
 ## Overview
-
 For fine-tuning or RAG, it is often necessary to generate data in Q&A format from raw, real-world data. However, in scenarios where you need to create a dataset from scratch, rather than from a ready-made dataset, you will face many challenges.
 
 This handson aims to alleviate some of that headache by demonstrating how to create a QnA dataset from complex unstructured data, assuming a real-world scenario. The sample aims to be step-by-step for developers and data scientists, as well as those in the field, to try it out with a little help.
 
-## Requirements
+## Scenario
+We have a variety of information about the latest flagship mobile pohnes, including detailed product specifications, user manuals, advertising brochures, and CS information guides, in various formats such as pdf, csv, and txt. These raw data are used to create synthetic QnAs and use them for fine tuning and RAG to improve user experience. 
 
+Below is a comparison of the results before and after fine tuning of GPT-4o without RAG. GPT-4o is available to a small number of customers as a private preview as of July 2024.
+![fine-tuning-result-sample](./imgs/fine-tuning-result-sample.png)
+
+This is the result of creating a set of 16 questions and answers for PoC and comparing three indicators of **Similarity, Coherence, and Fluency** in Azure AI studio. The values ​​of the indicator are on a scale of 1-5, with higher values ​​being better.
+
+![evaluation-sample](./imgs/evaluation-sample.png)
+
+## Requirements
 Before starting, you have met the following requirements:
 
 - Access to Azure OpenAI Service - you can apply for access [here](https://go.microsoft.com/fwlink/?linkid=2222006)
@@ -16,18 +24,17 @@ Before starting, you have met the following requirements:
 Please do not forget to modify the `.env` file to match your account. Rename `.env.sample` to `.env` or copy and use it
 
 ## Contents
-
 `make_qa_multimodal_pdf_docai.ipynb` is most recommended. However, if you feel that the logic of this code is complicated, or if your file content consists only of images or text, try looking at other Jupyter notebooks first.
 
 ### PDF
-- `make_qa_multimodal_pdf_docai.ipynb`:
-- `make_qa_multimodal_pdf.ipynb`:
-- `make_qa_only_image_multiple_pdf.ipynb`:
-- `make_qa_only_image_pdf.ipynb`:
+- `make_qa_multimodal_pdf_docai.ipynb`: (Recommended) Generate QnA synthetic dataset from a Complex PDF using Azure AI Document Intelligence.
+- `make_qa_multimodal_pdf.ipynb`:  Generate QnA synthetic dataset from a Complex PDF using Unstructured toolkit.
+- `make_qa_only_image_multiple_pdf.ipynb`: Generate QnA synthetic dataset from multiple PDFs - Image-heavy PDF.
+- `make_qa_only_image_pdf.ipynb`: Generate QnA synthetic dataset from a PDF - Image-heavy PDF.
 
 ### CSV
-- `make_qa_only_text_csv.ipynb`:
-- `make_qa_only_text_multiple_csv.ipynb`:
+- `make_qa_csv.ipynb`: This is the general case. It is not difficult to create a QnA dataset by reading and chunking with CSVLoader.
+- `make_qa_image_url_csv.ipynb`: This is another common case. If image url information is included, change this url to a summary result for that image.
 
 ## How to get started 
 
@@ -43,5 +50,4 @@ You can start a new project by connecting to Codespace Project.
 ### Option 3. Your local PC
 
 ## License Summary
-
 This sample code is provided under the MIT-0 license. See the LICENSE file.
