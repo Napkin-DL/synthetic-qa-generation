@@ -1,7 +1,7 @@
 # Generate Synthetic QnAs from real-world data
 
 ## Overview
-For fine-tuning or RAG, it is often necessary to generate data in Q&A format from raw, real-world data. However, in scenarios where you need to create a dataset from scratch, rather than from a ready-made dataset, you will face many challenges.
+For LLM/SLM fine-tuning, RAG, or evaluation, it is often necessary to generate data in Q&A format from real-world raw data. However, in scenarios where you need to create a dataset from scratch, rather than from a ready-made dataset, you will face many challenges.
 
 This handson aims to alleviate some of that headache by demonstrating how to create a QnA dataset from complex unstructured data, assuming a real-world scenario. The sample aims to be step-by-step for developers and data scientists, as well as those in the field, to try it out with a little help.
 
@@ -11,6 +11,8 @@ This handson aims to alleviate some of that headache by demonstrating how to cre
 We have a variety of information about the latest flagship mobile pohnes, including detailed product specifications, user manuals, advertising brochures, and CS information guides, in various formats such as pdf, csv, and txt. These raw data are used to create synthetic QnAs and use them for fine tuning and RAG to improve user experience. 
 
 ![concept](./imgs/concept.png)
+
+![diagram](./imgs/diagram.png)
 
 ### Experiments
 
