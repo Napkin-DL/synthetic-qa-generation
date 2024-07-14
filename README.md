@@ -1,9 +1,9 @@
-# Generate Synthetic QnAs from real-world data
+# Generate Synthetic QnAs from Real-world Data
 
 ## Overview
 For LLM/SLM fine-tuning, RAG, or evaluation, it is often necessary to generate data in Q&A format from real-world raw data. However, in scenarios where you need to create a dataset from scratch, rather than from a ready-made dataset, you will face many challenges.
 
-This handson aims to alleviate some of that headache by demonstrating how to create a QnA dataset from complex unstructured data, assuming a real-world scenario. The sample aims to be step-by-step for developers and data scientists, as well as those in the field, to try it out with a little help.
+This hands-on lab aims to alleviate some of that headache by demonstrating how to create/augment a QnA dataset from complex unstructured data, assuming a real-world scenario. The sample aims to be step-by-step for developers and data scientists, as well as those in the field, to try it out with a little help.
 
 ## Scenario
 
@@ -28,23 +28,40 @@ Before starting, you have met the following requirements:
 
 - Access to Azure OpenAI Service - you can apply for access [here](https://go.microsoft.com/fwlink/?linkid=2222006)
 - An Azure AI Studio project - go to [aka.ms/azureaistudio](https://aka.ms/azureaistudio) to create a project
+- Azure AI Document Intelligence (v4.0 - 2024-02-29 preview) - Find out more [here](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview?view=doc-intel-4.0.0)
+
 
 Please do not forget to modify the `.env` file to match your account. Rename `.env.sample` to `.env` or copy and use it
 
 ## Contents
-`make_qa_multimodal_pdf_docai.ipynb` is most recommended. However, if you feel that the logic of this code is complicated, or if your file content consists only of images or text, try looking at other Jupyter notebooks first.
 
-### PDF
+### Stage 1. Constructing a seed dataset 
+Convert the given raw data into data that can be used for model training/RAG/evaluation using Azure OpenAI GPT-4o. `make_qa_multimodal_pdf_docai.ipynb` is most recommended. However, if you feel that the logic of this code is complicated, or if your file content consists only of images or text, please try looking at other Jupyter notebooks first.
+
+#### PDF
 - `make_qa_multimodal_pdf_docai.ipynb`: (Recommended) Generate QnA synthetic dataset from a Complex PDF using Azure AI Document Intelligence.
 - `make_qa_multimodal_pdf_oss.ipynb`:  Generate QnA synthetic dataset from a Complex PDF using Open source (Unstructured toolkit for this hands-on). To run this file, you first need to install the required packages with `startup_unstructured.sh`. The installation will take a few minutes.
 - `make_qa_only_image_multiple_pdf.ipynb`: Generate QnA synthetic dataset from multiple PDFs - Image-heavy PDF.
 - `make_qa_only_image_pdf.ipynb`: Generate QnA synthetic dataset from a PDF - Image-heavy PDF.
 
-### CSV
+#### CSV
 - `make_qa_csv.ipynb`: This is the general case. It is not difficult to create a QnA dataset by reading and chunking with CSVLoader.
 - `make_qa_image_url_csv.ipynb`: This is another common case. If image url information is included, change this url to a summary result for that image.
 
+### Stage 2. Data Augmentation (Optional)
+Leverage Microsoft's research to generate more high-quality and complex data. Once you have established a baseline in Stage 1, experiment with this step for even better results. By utilizing the concepts of Evolve-Instruct and GLAN, you can fine tune into your LLM specialized for a specific industry/technology domain.
+
+#### Evolve-Instruct
+- Under development - Coming soon
+
+#### GLAN (Generalized Instruction Tuning)
+- Under development - Coming soon
+
 ## How to get started 
+Any option is fine, but you may wish to refer to the instructions below:
+- For engineers or practitioners in the field who want to use this hands-on in PoC/MVP, we recommend Option 1.
+- For instructors who want to use this hands-on in their workshops, we recommend Option 2.
+- For developers in the field who want to launch a production, we recommend Option 3.
 
 ### Option 1. Azure AI Studio or Azure ML Studio
 Create your compute instance. For code development, we recommend `Standard_DS11_v2` (2 cores, 14GB RAM, 28GB storage, No GPUs).
