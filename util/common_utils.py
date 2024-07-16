@@ -39,7 +39,7 @@ def convert_to_oai_format(qa_pair, system_prompt_msg="You're an AI assistant tha
                     sample.append(user_message)
                     sample.append(assistant_message)
             else:  # single turn
-                if isinstance(qa_, dict):                
+                if isinstance(qa, dict):                
                     user_message = {"role": "user", "content": qa["QUESTION"]}
                     assistant_message = {"role": "assistant", "content": qa["ANSWER"]}
                 else:
