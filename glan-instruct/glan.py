@@ -398,7 +398,7 @@ def glan_instruction_generation(args):
     MAX_NUMBER_OF_FIELDS = args.max_number_of_fields
     MAX_NUMBER_OF_SUBJECTS = args.max_number_of_subjects
     MAX_NUMBER_OF_SUBTOPICS = args.max_number_of_subtopics
-    MAX_NUMBER_OF_SESSION_NAME = args.max_number_of_ssession_name
+    MAX_NUMBER_OF_SESSION_NAME = args.max_number_of_session_name
     NUM_ITERATIONS = args.num_iterations
     NUM_QUESTIONS_PER_ITERATION = args.num_questions_per_iteration
     QUESTION_MAX_TOKENS = args.question_max_tokens
@@ -527,7 +527,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_number_of_fields", type=int, default=1)
     parser.add_argument("--max_number_of_subjects", type=int, default=2)
     parser.add_argument("--max_number_of_subtopics", type=int, default=5)
-    parser.add_argument("--max_number_of_ssession_name", type=int, default=3)
+    parser.add_argument("--max_number_of_session_name", type=int, default=3)
 
     parser.add_argument("--num_iterations", type=int, default=2)
     parser.add_argument("--num_questions_per_iteration", type=int, default=5)

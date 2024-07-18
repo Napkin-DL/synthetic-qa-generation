@@ -40,16 +40,16 @@ python glan.py --language Korean --num_iterations 1 --num_questions_per_iteratio
 Generate large amounts of data
 ```
 python glan.py \
-    --disciplines_filepath disciplines_sample.txt \
-    --language English \
+    --disciplines_filepath disciplines1.txt \
+    --language Korean \
     --max_number_of_subjects 20 \
     --max_number_of_subtopics 30 \
-    --max_number_of_ssession_name 30 \
-    --num_iterations 100 \
-    --num_questions_per_iteration 50 \
+    --max_number_of_session_name 30 \
+    --num_iterations 10 \
+    --num_questions_per_iteration 100 \
     --question_max_tokens 1024 \
-    --question_batch_size 10 \
-    --answer_batch_size 10
+    --question_batch_size 15 \
+    --answer_batch_size 15
 ```
 
 ### Tunable parameters
