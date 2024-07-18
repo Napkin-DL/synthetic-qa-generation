@@ -1,6 +1,10 @@
 # Evolve-Instruct
 
 ## Overview
+The Evolve Instruct method creates more diverse and complex instructions by modifying (augmenting) existing instruction data. To achieve this, this technique utilizes LLMs such as GPT-4o to rewrite or transform existing instructions. In particular, It uses two strategies to make instructions more complex or create new instructions: In-depth Evolving and In-breadth Evolving.
+
+- In-depth Evolving: Make an instruction more difficult by adding constraints to it, making it more specific, increasing the logical reasoning steps, or complicating the input.
+- In-breadth Evolving: Create completely new commands based on existing commands to expand the scope of topics and technologies and increase the diversity of your datasets.
 
 ## Implementation
 This open-source implementation is based on the [WizardLM paper](https://arxiv.org/abs/2304.12244) and [h2o-wizardlm](https://github.com/h2oai/h2o-wizardlm).
