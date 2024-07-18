@@ -1,0 +1,34 @@
+Classical Mechanics
+Quantum Mechanics
+Thermodynamics
+Electromagnetism
+Optics
+Astrophysics
+Organic Chemistry
+Inorganic Chemistry
+Physical Chemistry
+Analytical Chemistry
+Biochemistry
+Botany
+Zoology
+Genetics
+Microbiology
+Ecology
+Evolutionary Biology
+Geology
+Meteorology
+Oceanography
+Paleontology
+Environmental Science
+Algebra
+Calculus
+Statistics
+Geometry
+Number Theory
+Topology
+Artificial Intelligence
+Machine Learning
+Cybersecurity
+Data Science
+Software Engineering
+Human-Computer Interaction

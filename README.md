@@ -1,4 +1,4 @@
-# Generate Synthetic QnAs from Real-world Data
+# Generate Synthetic QnAs from Real-world Data 
 
 ## Overview
 For LLM/SLM fine-tuning, RAG, or evaluation, it is often necessary to generate data in Q&A format from real-world raw data. However, in scenarios where you need to create a dataset from scratch, rather than from a ready-made dataset, you will face many challenges.
@@ -30,7 +30,6 @@ Before starting, you have met the following requirements:
 - An Azure AI Studio project - go to [aka.ms/azureaistudio](https://aka.ms/azureaistudio) to create a project
 - Azure AI Document Intelligence (v4.0 - 2024-02-29 preview) - Find out more [here](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview?view=doc-intel-4.0.0)
 
-
 Please do not forget to modify the `.env` file to match your account. Rename `.env.sample` to `.env` or copy and use it
 
 ## Contents
@@ -51,11 +50,10 @@ Convert the given raw data into data that can be used for model training/RAG/eva
 ### Stage 2. Data Augmentation (Optional)
 Leverage Microsoft's research to generate more high-quality and complex data. Once you have established a baseline in Stage 1, experiment with this step for even better results. By utilizing the concepts of Evolve-Instruct and GLAN, you can fine tune into your LLM specialized for a specific industry/technology domain.
 
-#### Evolve-Instruct
-- Under development - Coming soon
+#### [Evolve-Instruct](evolve-instruct/README.md)
 
-#### GLAN (Generalized Instruction Tuning)
-- Under development - Coming soon
+#### [GLAN (Generalized Instruction Tuning)](glan-instruct/README.md)
+GLAN can be performed independently without the need to go through Stage 1. This is because it covers all generalized domains. Please see README for more details,
 
 ## How to get started 
 Any option is fine, but you may wish to refer to the instructions below:
